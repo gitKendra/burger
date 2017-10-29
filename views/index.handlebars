@@ -1,23 +1,42 @@
 {{!-- Create a button that will submit the user input into the database. --}}
 
-<div class="row">
-{{!-- 	// contains available burgers to eat --}} 	
-	<div class="col-md-4" style="border:1px">
-		<p>Contains burgers ready to devour</p>
+<div class="row burger-row">
+{{!--  contains available burgers to eat --}} 	
+	<div class="col-md-6">
+		<h3>Burgers ready to devour:</h3>
+		{{#each burgers}}
+			{{#unless devoured}}
+				<div class="row burger-item">
+					<div class="col-md-8"><p>#{{id}} {{burger_name}}</p></div> 
+					<div class="col-md-4 float-right"><button data-id="{{id}}" class="btn btn-default devour-burger">Devour it!</button></div>
+				</div>
+			{{/unless}}
+		{{/each}}	
 	</div>
-{{!-- 	contains the form and button to add a burger to eat --}}
-	<div class="col-md-4" style="border:1px">
-		<p>Form and button to create new burgers</p>
-		<form action="/" method="POST">
-			<textarea type="text" name="burger"></textarea>
 
-			<button type="submit">Submit</button>
+
+{{!--  contains the burgers that have been devoured --}}
+	<div class="col-md-6">
+		<h3>Burgers devoured:</h3>
+		{{#each burgers}}
+			{{#if devoured}}
+				<div class="row burger-item">
+					<div class="col-md-12"><p>#{{id}} {{burger_name}}</p></div> 
+				</div>
+			{{/if}}
+		{{/each}}	
+	</div>
+
+</div>
+
+<div class="row">
+	{{!-- 	contains the form and button to add a burger to eat --}}
+	<div class="col-md-4 col-md-offset-4">
+		<p>Add your own burger to devour</p>
+		<form action="/" method="POST">
+			<textarea class="form-control align-center" type="text" name="burger"></textarea>
+
+			<button class="btn btn-default" type="submit">Submit</button>
 		</form>
 	</div>
-
-{{!-- 	// contains the burgers that have been devoured --}}
-	<div class="col-md-4" style="border:1px">
-		<p>Contains burgers you've devoured</p>
-	</div>
-
 </div>

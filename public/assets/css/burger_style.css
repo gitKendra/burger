@@ -2,10 +2,41 @@ body {
 	background-color: #aeaeae;
 }
 
+h3 {
+	font-size: 22px;
+}
+
+p {
+	font-size: 16px;
+}
+
+
 header {
 	font-family: 'Lobster', cursive;
+	border-bottom: 1px dashed black;
+}
+
+img{
+	 max-height: 250px;
+	 max-width: 250px;
 }
 
 .jumbotron {
 	background-color: #ff2727;
+	margin: 0px;
 }
+
+.page-header {
+	border: 0px;
+}
+
+.burger-row {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed black;
+}
+
+.burger-item {
+	margin:5px;
+}
+
