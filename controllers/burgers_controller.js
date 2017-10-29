@@ -32,7 +32,7 @@ router.put('/api/burgers/:id', function(req, res){
   console.log('You sent, ' + req.params.id);
   burger.update(req.params.id, function(data){
   	console.log("Called burger update");
-	res.redirect('/');
+	//res.redirect('/');
   });
   // Test it
   // return res.send('You sent, ' + req.body.task);

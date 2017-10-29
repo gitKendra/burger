@@ -6,12 +6,12 @@ $(function(){
 		var id = $(this).data("id");
 		console.log(id);
 		// Send the PUT request
-		$.ajax("/api/burgers/"+id, {
+		$.put("/api/burgers/"+id, {
 			type: "PUT",
 			data: id
 		}).then(function(){
 			console.log("Move burger to devoured");
-	//		location.reload();
+			location.reload();
 		})
 	});
 
