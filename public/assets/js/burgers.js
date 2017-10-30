@@ -1,16 +1,14 @@
-// JS file to handle button onclicks from webpage
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Wait to attach handler until the DOM is fully loaded.
 $(function(){
 	$(".devour-burger").on("click", function(event){
-		// Set id
+		// Set id based on button data-id attribute
 		var id = $(this).data("id");
-		console.log(id);
 		// Send the PUT request
 		$.ajax("/api/burgers/"+id, {
 			type: "PUT",
 			data: id
 		}).then(function(){
-			console.log("Move burger to devoured");
+			// Reload the webpage
 			location.reload();
 		})
 	});

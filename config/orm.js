@@ -1,4 +1,4 @@
-// Import mySQL connection.
+// Import database connection.
 var connection = require('./connection.js');
 
 // Create methods that will execute the necessary MySQL commands in the controller
@@ -23,8 +23,7 @@ var orm = {
 			cb(result);
 		});
 	},
-	// Update and existing burger in the database
-	// val is the id of the burger to update
+	// Update and existing burger in the database. val is the id of the burger to update
 	updateOne: function(val, cb){
 		var queryString = "UPDATE burgers SET devoured=true WHERE id=?";
 		connection.query(queryString, [val], function(err, result){
@@ -35,7 +34,6 @@ var orm = {
 		});
 	}
 }
-
 
 // export ORM object
 module.exports = orm;
