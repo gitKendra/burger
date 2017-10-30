@@ -23,25 +23,16 @@ router.post('/', function(req, res){
 		// Send back the Id of the new burger????
 		res.redirect('/');
 	});
-    // res.redirect("/");
-  // });
 });
 
 router.put('/api/burgers/:id', function(req, res){
-  // Test it
-  console.log('You sent, ' + req.params.id);
-  burger.update(req.params.id, function(data){
-  	console.log("Called burger update");
-	//res.redirect('/');
+  burger.update(req.params.id, function(result){
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
   });
-  // Test it
-  // return res.send('You sent, ' + req.body.task);
-
-  // connection.query("INSERT INTO burgers (burger_name) VALUES (?)", [req.body.task], function(err, result) {
-  //   if (err) throw err;
-
-  //   res.redirect("/");
-  // });
 });
 
 // export the router

@@ -6,7 +6,7 @@ $(function(){
 		var id = $(this).data("id");
 		console.log(id);
 		// Send the PUT request
-		$.put("/api/burgers/"+id, {
+		$.ajax("/api/burgers/"+id, {
 			type: "PUT",
 			data: id
 		}).then(function(){
