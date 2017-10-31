@@ -6,7 +6,7 @@ if(process.env.JAWSDB_URL){
   // Heroku-JawsDB Connection
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
-else{}
+else{
   // MySQL DB Connection Information
   connection = mysql.createConnection({
     host: "localhost",
@@ -14,6 +14,7 @@ else{}
     password: "root",
     database: "burgers_db",
     port: 8889
+}
 });
 
 // Initiate MySQL Connection.
