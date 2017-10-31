@@ -14,8 +14,8 @@ else{
     password: "root",
     database: "burgers_db",
     port: 8889
+  });
 }
-});
 
 // Initiate MySQL Connection.
 connection.connect(function(err) {
