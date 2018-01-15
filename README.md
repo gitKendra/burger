@@ -1,6 +1,6 @@
 # burger - Eat Da Burger! App
 ### Overview
-A web responsive SPA using MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern. Users can enter a custom burger they would like to eat. App displays burgers they can devour and burgers that have already been devoured.
+A web responsive SPA using MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern. Users can enter a custom burger they would like to eat. App displays burgers they can devour and burgers that have already been devoured. You can view the app hosted on Heroku at https://eat-da-burger-retro.herokuapp.com/ or view below on how to run it locally.
 
 ### To Run App Locally
 1. Clone the repo.
@@ -11,7 +11,9 @@ A web responsive SPA using MySQL, Node, Express, Handlebars and a homemade ORM f
 
 ### Screenshots
 Desktop view:
+
 ![Desktop Screenshot](https://i.imgur.com/gsYZUvQ.png)
 
 Mobile view:
+
 ![Mobile Screenshot](https://i.imgur.com/53jwcHt.png)
