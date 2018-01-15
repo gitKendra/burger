@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.",
+  "description": "A web responsive SPA using MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
